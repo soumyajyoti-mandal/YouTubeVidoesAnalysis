@@ -3,9 +3,9 @@ import glob
 import os
 import json
 #finding all csv files
-list_csv  = glob.glob(r"archive\*.csv")
+list_csv  = glob.glob(r"<file directory>\*.csv")
 #finding all json files
-list_json =  glob.glob(r"archive\*.json")
+list_json =  glob.glob(r"<file directory>\*.json")
 
 totalrecords =[]
 for csvfile in list_csv:
@@ -33,7 +33,7 @@ totalrecords[0][0].insert(6,"category")
 #removing header record of each csv file from the list
 for e in range(1,len(totalrecords)):
     totalrecords[e].pop(0)
-
+#write to output csv file
 outputfile=open("output.csv","w",newline='')
 outputwriter = csv.writer(outputfile)
 for v in range(len(totalrecords)):
