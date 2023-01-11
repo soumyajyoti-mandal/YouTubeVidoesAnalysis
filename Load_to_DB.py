@@ -2,9 +2,9 @@ import csv
 import mysql.connector
 try:
   mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="August@87"
+  host="hostname",
+  user="username",
+  password="password"
   )
 except Exception as e:
   print("Error while connecting to MySQL", e)
